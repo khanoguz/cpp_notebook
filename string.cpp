@@ -22,11 +22,21 @@ main()
 
     char string[] = "Oguz";
     char string2[] = "Kagan";
-
     char string3[10];
-    strcpy(string3,string);
     
+
+    strcpy(string3,string);
     std::cout<<"string3: "<<string<<std::endl;
+    std::cout<<strlen(string3)<<std::endl;
+    std::cout<<strcat(strcat(string," "), string2)<<std::endl;
+    std::cout<<strcmp(string,string3)<<std::endl;
+
+    char start = 'g';
+    char *ptr = strchr(string2,start);
+
+    std::cout<<ptr<<std::endl;
+
+
     system("pause");
     return 0;
 
