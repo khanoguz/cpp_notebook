@@ -1,22 +1,30 @@
 #include<iostream>
-using namespace std;
+#include<cstring>
+
+#define SIZE 50
+
+char *swap(char *ptr)
+{
+    int last = strlen(ptr) - 1;
+    static char newArray[SIZE];
+
+    for(int i = 0;i<=last;i++)
+    {
+        newArray[i] = ptr[last - i];
+    }
+
+    return newArray;
+}
 
 main()
 {
-    int a[9];
+    char array[SIZE];
 
-    for(int i = 0;i<10; i++)
-    {
-        a[i] = i;
-        std::cout<<"a["<<i<<"]: "<<a[i]<<std::endl;
+    std::cout<<"kelimeyi girin:";
+    std::cin>>array;
 
-    }
-
-    int *aPtr;
-    aPtr = a;
-    
+    std::cout<<"\n"<<swap(array)<<std::endl;
 
     system("pause");
     return 0;
-
 }
