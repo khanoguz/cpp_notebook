@@ -1,29 +1,19 @@
 #include<iostream>
 #include<cstring>
 
-#define SIZE 50
-
-char *swap(char *ptr)
-{
-    int last = strlen(ptr) - 1;
-    static char newArray[SIZE];
-
-    for(int i = 0;i<=last;i++)
-    {
-        newArray[i] = ptr[last - i];
-    }
-
-    return newArray;
-}
 
 main()
 {
-    char array[SIZE];
+    char *arr[3] = {"asdas","dasda","asdasd"};
 
-    std::cout<<"kelimeyi girin:";
-    std::cin>>array;
-
-    std::cout<<"\n"<<swap(array)<<std::endl;
+    for(int i = 0;i<3;i++)
+    {
+        gets(arr[i]);
+    }
+    for(int i = 0;i<3;i++)
+    {
+    puts(arr[i]);
+    }
 
     system("pause");
     return 0;
