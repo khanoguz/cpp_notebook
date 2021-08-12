@@ -12,8 +12,9 @@ ayrık form - > x[i+1] = x[i]+ dt * (a * x[i] + b * u[i])
 main()
 {
     /*
-    parameters
-    */
+    
+    //parameters
+
    double orneklemeZamani = 0.1;
    double baslatmaZamani = 0.0;
    double bitisZamani = 5.0;
@@ -35,6 +36,17 @@ main()
     //backwardsolver(a,b,x,u,SIZE,orneklemeZamani);
     centralsolver(a,b,x,u,SIZE,orneklemeZamani);
     results(x,u,SIZE);
+*/
+
+    systemParameters s1;
+    s1.ornekleme_zamani = 0.1;
+    s1.a = -2;
+    s1.b = 1;
+    s1.baslama_zamani = 0;
+    s1.bitis_zamani = 5;
+    s1.x0 = 0;
+
+    forwardsolver(s1);
 
    system("pause");
    return 0;
